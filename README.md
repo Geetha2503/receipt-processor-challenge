@@ -137,7 +137,7 @@ This repository contains the solution to a task where a Receipt Processor Servic
 
 4. ### Testing: 
 
-Testing the Receipt Processor Service can be done effectively using Postman, a popular tool for testing API endpoints. Follow these steps to configure and use Postman for testing:
+Testing the Receipt Processor Service can be done effectively using any API development and testing software like Postman, a popular tool for testing API endpoints. Follow these steps to configure and use Postman for testing:
 
 #### Using Postman
 
