@@ -41,9 +41,9 @@ This repository contains the solution to a task where a Receipt Processor Servic
 
 - The application will run on ```bash http://localhost:5000. ```
 
-3. ## API Endpoints: 
+3. ### API Endpoints: 
 
-### 1. POST `/receipts/process`
+##### 1. POST `/receipts/process`
 
 **Description**: Accepts a receipt JSON payload, calculates points, and returns a unique receipt ID.
 
@@ -71,7 +71,7 @@ This repository contains the solution to a task where a Receipt Processor Servic
     "id": "0a8c8325-06e2-45d3-9884-5ab9e40f5222"
 }
 ```
-### 2. GET `/receipts/{id}/points`
+##### 2. GET `/receipts/{id}/points`
 
 **Description**: Retrieves the points awarded for a specific receipt.
 
@@ -87,11 +87,11 @@ This repository contains the solution to a task where a Receipt Processor Servic
    }
 ```
 
-4. ## Testing: 
+4. ### Testing: 
 
 Testing the Receipt Processor Service can be done effectively using Postman, a popular tool for testing API endpoints. Follow these steps to configure and use Postman for testing:
 
-### Using Postman
+#### Using Postman
 
 a. **Install Postman**:
    If you haven't already installed Postman, download and install it from [Postman's official site](https://www.postman.com/downloads/).
@@ -138,8 +138,6 @@ f. **Create a New Request**:
    replacing "{id}" with the actual receipt ID received from the POST request.
    - Send the request and you should receive the points associated with that receipt.
 
-
-5. ## Testing Suite
 ## Notes
 
 - The application is designed to be stateless. Receipt data is stored in memory and will be cleared upon restarting the application.
