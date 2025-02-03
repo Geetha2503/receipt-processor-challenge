@@ -29,7 +29,7 @@ This repository contains the solution to a task where a Receipt Processor Servic
       python app.py
    ```
 
-- The application will run on ```bash http://localhost:5000. ```
+- The application will run on ```http://localhost:5000. ```
 
 2. ### Run Using Docker:
    ```bash
@@ -39,7 +39,7 @@ This repository contains the solution to a task where a Receipt Processor Servic
       docker run -p 5000:5000 receipt-processor
    ```
 
-- The application will run on ```bash http://localhost:5000. ```
+- The application will run on ```http://localhost:5000. ```
 
 3. ### API Endpoints: 
 
@@ -47,7 +47,7 @@ This repository contains the solution to a task where a Receipt Processor Servic
 
 **Description**: Accepts a receipt JSON payload, calculates points, and returns a unique receipt ID.
 
-**Example Request**:
+**Example 1 Request**:
 ```json
 {
     "retailer": "Target",
@@ -65,7 +65,7 @@ This repository contains the solution to a task where a Receipt Processor Servic
 
 ```
 
-**Example Response**:
+**Example 1 Response**:
 ```json
 {
     "id": "0a8c8325-06e2-45d3-9884-5ab9e40f5222"
@@ -85,6 +85,54 @@ This repository contains the solution to a task where a Receipt Processor Servic
    {
     "points": 28
    }
+```
+
+**Example 2 Request**:
+```json
+{
+  "retailer": "M&M Corner Market",
+  "purchaseDate": "2022-03-20",
+  "purchaseTime": "14:33",
+  "items": [
+    {
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    }
+  ],
+  "total": "9.00"
+}
+
+```
+
+**Example 2 Response**:
+```json
+{
+    "id": "29d069f6-1c65-45ce-a162-87a4e03d29d0"
+}
+```
+##### 2. GET `/receipts/{id}/points`
+
+**Description**: Retrieves the points awarded for a specific receipt.
+
+**Example Request**:
+```json
+     http://localhost:5000/receipts/29d069f6-1c65-45ce-a162-87a4e03d29d0/points 
+```
+
+**Example Response**:
+```bash
+   {
+    "points": 109
+}
 ```
 
 4. ### Testing: 
