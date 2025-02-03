@@ -126,7 +126,7 @@ d. **Set Up the Request for Submitting a Receipt**:
     ],
     "total": "35.35"
 }
-
+```
 e. **Send the Request**:
    - Click the "Send" button to transmit your request to the Flask API.
    - View the response in the lower section of the Postman window. You should receive a JSON response with a unique ID.
